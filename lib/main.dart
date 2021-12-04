@@ -30,6 +30,7 @@ class _MyHomePageState extends State<MyHomePage>{
     return Scaffold(
       drawer: NavBar(),
       appBar: AppBar(
+        backgroundColor: Colors.pinkAccent,
         title: Text('Sidebar'),
       ),
       body: Center(),
