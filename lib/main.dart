@@ -31,7 +31,7 @@ class _MyHomePageState extends State<MyHomePage>{
       drawer: NavBar(),
       appBar: AppBar(
         backgroundColor: Colors.pinkAccent,
-        title: Text('Sidebar'),
+        title: Text('Sidebar Course'),
       ),
       body: Center(),
     );

@@ -1,115 +1,112 @@
 
 import 'package:flutter/material.dart';
 
-class NavBar extends StatelessWidget{
+class NavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
     return Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            UserAccountsDrawerHeader(
-                accountName: Text('KheavSunny'),
-                accountEmail: Text('sunny@gmail.com'),
-                currentAccountPicture: CircleAvatar(
-                  child: ClipOval(
-                    child: Image.network(
-                        'https://www.clipartmax.com/png/middle/171-1717870_stockvader-predicted-cron-for-may-user-profile-icon-png.png',
-                      fit: BoxFit.cover,
-                      width: 200,
-                      height: 200,
-                    ),
-                  ),
-                ),
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: NetworkImage('https://i.pinimg.com/originals/8a/36/f1/8a36f1b33b436275a8424ab0d7c307da.jpg'),
+      child: ListView(
+        padding: EdgeInsets.zero,
+        children: <Widget>[
+          UserAccountsDrawerHeader(
+            accountName: Text('KheavSunny'),
+            accountEmail: Text('sunny@sunny.com'),
+            currentAccountPicture: CircleAvatar(
+              child: ClipOval(
+                child: Image.asset(
+                  'images/profileuser.png',
                   fit: BoxFit.cover,
-                ),
+                  width: 90,
+                  height: 90,
+                )
               ),
             ),
-            ListTile(
-              leading: Icon(
-                Icons.favorite,
-                color: Colors.pinkAccent,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('images/background.jpeg'),
+                fit: BoxFit.cover,
               ),
-              title: Text('Favorites'),
-              onTap: () => print('Fav'),
             ),
-            ListTile(
-              leading: Icon(
-                Icons.people,
-                color: Colors.pinkAccent,
-              ),
-              title: Text('Friends'),
-              onTap: () => print('Friends'),
+          ),
+          ListTile(
+            leading: Icon(
+              Icons.favorite,
+              color: Colors.pinkAccent,
             ),
-            ListTile(
-              leading: Icon(
-                Icons.share,
-                color: Colors.pinkAccent,
-              ),
-              title: Text('Share'),
-              onTap: () => print('Share'),
+            title: Text('Favorites'),
+            onTap: () => print('Fav'),
+          ),
+          ListTile(
+            leading: Icon(
+              Icons.people,
+              color: Colors.pinkAccent,
             ),
-            ListTile(
+            title: Text('Friends'),
+            onTap: () => print('Friends'),
+          ),
+          ListTile(
+            leading: Icon(
+              Icons.share,
+              color: Colors.pinkAccent,
+            ),
+            title: Text('Share'),
+            onTap: () => print('Share'),
+          ),
+          ListTile(
 
-              leading: Icon(
-                Icons.notifications,
+            leading: Icon(
+              Icons.notifications,
+              color: Colors.pinkAccent,
+            ),
+            title: Text('Request'),
+            onTap: () => print('Request'),
+            trailing: ClipOval(
+              child: Container(
                 color: Colors.pinkAccent,
-              ),
-              title: Text('Request'),
-              // onTap: () => print('Request'),
-              trailing: ClipOval(
-                child: Container(
-                  color: Colors.red,
-                  width: 20,
-                  height: 20,
-                  child: Center(
-                    child: Text(
-                        '8',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 12,
-                      ),
+                width: 30,
+                height: 30,
+                child: Center(
+                  child: Text(
+                    '99+',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 12,
                     ),
                   ),
                 ),
               ),
             ),
-            Divider(),
-            ListTile(
-              leading: Icon(
-                Icons.settings,
-                color: Colors.pinkAccent,
-              ),
-              title: Text('Settings'),
-              onTap: () => print('Settings'),
+          ),
+          Divider(),
+          ListTile(
+            leading: Icon(
+              Icons.settings,
+              color: Colors.pinkAccent,
             ),
-            ListTile(
-              leading: Icon(
-                Icons.policy,
-                color: Colors.pinkAccent,
-              ),
-              title: Text('Policies'),
-              onTap: () => print('Policies'),
+            title: Text('Settings'),
+            onTap: () => print('Settings'),
+          ),
+          ListTile(
+            leading: Icon(
+              Icons.policy,
+              color: Colors.pinkAccent,
             ),
-            Divider(),
-            ListTile(
-              leading: Icon(
-                Icons.exit_to_app,
-                color: Colors.pinkAccent,
-              ),
-              title: Text('Exit'),
-              onTap: () => print('Exit'),
+            title: Text('Policies'),
+            onTap: () => print('Policies'),
+          ),
+          Divider(),
+          ListTile(
+            leading: Icon(
+              Icons.exit_to_app,
+              color: Colors.pinkAccent,
             ),
+            title: Text('Exit'),
+            onTap: () => print('Exit'),
+          ),
 
-          ],
-        ),
+        ],
+      ),
     );
   }
 }
-
-
-
